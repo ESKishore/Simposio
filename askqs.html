@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="normalize" href="./css/normalize.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="question.css">
+
+  <title>Ask Question - Simposis</title>
+
+</head>
+
+<body>
+  <div class="container">
+  	<div class="logo container-fluid ">
+  		<a href="index.html" class="log_img" title="Simposio"><h4 class="name"> S I M P O S I O </h4></a>
+  		<div class="search">
+  			<input type="text" id="search_form" placeholder="Search..">
+  			<button type="submit" class="fa fa-search btn btn-primary" id="search"></button>
+  			<button type="button" id="login" class="btn btn-primary container-fluid" onclick="window.location.href='home.html'">Home</button>
+  			<button type="button" id="signup" class="btn btn-primary container-fluid" onclick="window.location.href='profile.html'">Profile</button>
+  	  </div>
+  	</div>
+    <div class="signup_form">
+			<form class="form-horizontal" action="index.html?post=true" target="_self" method="post">
+      <div class="heading"> <h4> Add question </h4> </div>
+			<div class="form-group">
+        <div class="input">
+				      <input required type="text" id="firstname" name="firstname" size="30" placeholder=" Start your question with 'What', 'How', etc." required/>
+        </div>
+			</div>
+			<div class="form-group">
+        <div class="input">
+          <select required="required" id="subject" name="subject">
+            <option value="">Select relevant course</option>
+            <option value="ml">Machine Learning</option>
+            <option value="wd">Web Development</option>
+            <option value="mc">Mobile Computing</option>
+            <option value="dm">Data Management</option>
+            <option value="sd">Software Development</option>
+            <option value="qa">Quality Assurance</option>
+            <option value="cs">Comm skills</option>
+          </select>
+				</div>
+			</div>
+      <div class="form-group">
+        <div class="input">
+          <input type="url" id="link" name="link" placeholder="Optional: include a link that gives context"   />
+        </div>
+      </div>
+      <a href="index.html">Cancel</a>
+      <button type="submit" class="btn btn-primary">Post Question</button>
+
+		</form>
+	 </div>
+ </div>
+ <div class="footer">
+ 		<div class="footer_add">
+ 			<h5> Simposio</h5>
+ 			<p>Halifax, Nova Scotia, Canada  B3H 4R2 1-902-494-2211 </p>
+ 		</div>
+ 		<div class="footer_social">
+ 			<a href="#" title="Facebook" class="fa fa-facebook"></a>
+ 			<a href="#" class="fa fa-twitter" title="Twitter"></a>
+ 			<a href="#" class="fa fa-youtube" title="YouTube"></a>
+ 			<a href="#" class="fa fa-instagram" title="Instagram"></a>
+ 		</div>
+ </div>
+</div>
+</body>
+
+</html>
+
+<!-- References:
+[1]a. Mark Otto, "Bootstrap", Getbootstrap.com, 2018. [Online]. Available: https://getbootstrap.com/. [Accessed: 30- Jun- 2018].
+[2]"How To Create a Search Button", W3schools.com, 2018. [Online]. Available: https://www.w3schools.com/howto/howto_css_search_button.asp. [Accessed: 30- Jun- 2018].
+[3]Wix.com, 2018. [Online]. Available: https://www.wix.com/dashboard/0aaa08c1-a2fb-4a4b-9ae8-de6667a02c05/home. [Accessed: 30- Jun- 2018].
+ -->

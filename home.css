@@ -1,0 +1,724 @@
+<style>
+	*{
+		margin: 0%;
+		padding: 0px;
+	}
+	@media screen and (max-width: 320px){
+		.container {
+			margin: 0%;
+			padding: 0%;
+			width: auto;
+		}
+		.logo {
+			margin: 0%;
+			padding: 0% 0.5%;
+			width: 100%;
+			height: 20%;
+			background-color: #FFFFFF;
+			border-top: 0.3em solid #9E2510;
+			border-bottom: 0.075em solid grey;
+			position: fixed;
+		}
+		.logo img{
+			width: 100%;
+			height: 35%;
+		}
+		.logo #search_form{
+			width: 80%;
+			height: 2em;
+			display: inline-block;
+		}
+		.logo #search{
+			width: 12%;
+			height: 2em;
+			float: right;
+		}
+		.logo #login{
+			margin-top: 1%;
+			width: 100%;
+		}
+		.logo #signup{
+			margin-top: 1%;
+			width: 100%;
+		}
+		.content {
+			position: inherit;
+			margin-top: 10em;
+		}
+		.content .question_content{
+			display: block;
+			float: left;
+			width: 100%;
+			margin-left: 5%;
+			border-right: 0.05em solid grey;
+		}
+		.content .question_content .sub_head{
+			width: 100%;
+			display: block;
+			margin-bottom: 7.5em;
+		}
+		.content .question_content .sub_head h3{
+			display: inline-block;
+			float: left;
+		}
+		.content .question_content button{
+			width: 100%;
+			display: inline-block;
+			float: right;
+			margin-top: 2.5%;
+			margin-right: 10%;
+		}
+		.content .question_content .questions	{
+			display: block;
+			width: 90%;
+			padding: 2% 0%;
+			margin-top: 1%;
+			border-top: 0.01em solid grey;
+		}
+		.content .courses{
+			text-align: center;
+			display: inline-block;
+			float: right;
+			width: 100%;
+		}
+		.footer{
+			display: block;
+			width: 100%;
+			margin-top: 5%;
+			border-top: 0.1em solid #9E2510;
+		}
+		.footer .footer_add{
+			width: 100%;
+			display: inline-block;
+			float: left;
+			padding-left: 1%;
+		}
+		.footer .footer_add h5{
+			color: #9E2510;
+			font-size: 1.5em;
+			font-family: "Helvetica Neue";
+		}
+		.footer .footer_add p{
+			color: grey;
+			font-size: 1em;
+		}
+		.footer .footer_social{
+			width: 100%;
+			display: inline-block;
+			float: left;
+			text-align: left;
+		}
+		.footer .footer_social .fa {
+      padding: 0.3em;
+      font-size: 1.5em;
+      width: 5%%;
+			margin-right: 1%;
+			margin-top: 2.5%;
+      text-align: center;
+      text-decoration: none;
+    }
+		.footer .footer_social .fa:hover {
+        opacity: 0.8;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+	}
+	@media screen and (max-width: 768px) and (min-width: 321px) {
+		.container {
+			margin: 0%;
+			padding: 0%;
+			width: auto;
+		}
+		.logo {
+			margin: 0%;
+			padding: 0% 0.5%;
+			width: 100%;
+			height: 15%;
+			background-color: #FFFFFF;
+			border-top: 0.3em solid #9E2510;
+			border-bottom: 0.075em solid grey;
+			position: fixed;
+		}
+		.logo img{
+			width: 50%;
+			margin-left: 25%;
+			height: 40%;
+		}
+		.logo #search_form{
+			width: 80%;
+			height: 15%;
+			margin-left: 1%;
+			display: inline-block;
+		}
+		.logo #search{
+			width: 17%;
+			height: 10%;
+			padding-top: 0%;
+		}
+		.logo #login{
+			margin-top: 1%;
+			margin-left: 1%;
+			width: 49%;
+			display: block;
+			float: left;
+		}
+		.logo #signup{
+			margin-top: 1%;
+			margin-right: 1%;
+			width: 49%;
+			display: block;
+			float: left;
+		}
+		.content {
+			position: inherit;
+			margin-top: 10em;
+		}
+		.content .question_content{
+			display: block;
+			float: left;
+			width: 100%;
+			margin-left: 5%;
+			border-right: 0.25em solid #9E2510;
+		}
+		.content .question_content .sub_head{
+			width: 100%;
+			display: block;
+			margin-bottom:5em;
+		}
+		.content .question_content .sub_head h3{
+			display: inline-block;
+			float: left;
+		}
+		.content .question_content button{
+			width: 30%;
+			display: inline-block;
+			float: right;
+			margin-top: 2.5%;
+			margin-right: 10%;
+		}
+		.content .question_content .questions	{
+			display: block;
+			width: 90%;
+			padding: 2% 0%;
+			margin-top: 1%;
+			border-top: 0.01em solid grey;
+		}
+		.content .courses{
+			text-align: center;
+			display: inline-block;
+			float: right;
+			width: 100%;
+		}
+		.footer{
+			display: block;
+			width: 100%;
+			margin-top: 5%;
+			border-right: 0.25em solid #9E2510;
+		}
+		.footer .footer_add{
+			width: 50%;
+			display: inline-block;
+			float: left;
+			padding-left: 1%;
+		}
+		.footer .footer_add h5{
+			color: #9E2510;
+			font-size: 1.5em;
+			font-family: "Helvetica Neue";
+		}
+		.footer .footer_add p{
+			color: grey;
+			font-size: 1em;
+		}
+		.footer .footer_social{
+			width: 50%;
+			display: inline-block;
+			float: right;
+			text-align: right;
+		}
+		.footer .footer_social .fa {
+      padding: 0.3em;
+      font-size: 1.5em;
+      width: 5%%;
+			margin-right: 1%;
+			margin-top: 2.5%;
+      text-align: center;
+      text-decoration: none;
+    }
+		.footer .footer_social .fa:hover {
+        opacity: 0.8;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+	}
+	@media screen and (max-width: 960px) and (min-width: 769px) {
+		.container {
+			margin: 0%;
+			padding: 0%;
+			width: auto;
+		}
+		.logo{
+			margin: 0%;
+			padding: 0% 0.5%;
+			width: 100%;
+			height: 10%;
+			background-color: #FFFFFF;
+			border-top: 0.3em solid #9E2510;
+			border-bottom: 0.075em solid grey;
+			position: fixed;
+		}
+		.logo img{
+			width: 10em;
+			height: auto;
+		}
+		.search{
+			display: inline-block;
+		}
+		.logo #search_form {
+			border-radius: 0.25em;
+			padding-left: 0.5em;
+			margin-left: 2.5em;
+			background-color: #F4F4F4;
+			width: 15em;
+			height: 2.5em;
+		}
+		.logo #search {
+			border-radius: 0.25em;
+			height: 2.5em;
+			width: 4em;
+		}
+		.logo #login {
+			display: inline-block;
+			margin-left: 7.5em;
+			width: 6em;
+			height: 2.5em;
+		}
+		.logo #signup {
+			display: inline-block;
+			margin-left: 1em;
+			width: 6em;
+			height: 2.5em;
+		}
+		.content {
+			position: inherit;
+			margin-top: 6.5em;
+		}
+		.content .question_content{
+			display: inline-block;
+			float: left;
+			width: 55%;
+			margin-left: 5%;
+			border-right: 0.25em solid #9E2510;
+		}
+		.content .question_content .sub_head{
+			width: 100%;
+			display: block;
+			margin-bottom: 12%;
+		}
+		.content .question_content .sub_head h3{
+			display: inline-block;
+			float: left;
+		}
+		.content .question_content button{
+			width: 25%;
+			display: inline-block;
+			float: right;
+			margin-top: 2%;
+			margin-right: 10%;
+		}
+		.content .question_content .questions	{
+			display: block;
+			width: 90%;
+			padding: 2% 0%;
+			margin-top: 1%;
+			border-top: 0.01em solid grey;
+		}
+		.content .courses{
+			text-align: center;
+			display: inline-block;
+			float: right;
+			width: 35%;
+			position: fixed;
+		}
+		.footer{
+			display: block;
+			width: 100%;
+			margin-top: 5%;
+			border-top: 0.1em solid #9E2510;
+		}
+		.footer .footer_add{
+			width: 50%;
+			display: inline-block;
+			float: left;
+			padding-left: 1%;
+		}
+		.footer .footer_add h5{
+			color: #9E2510;
+			font-size: 1.5em;
+			font-family: "Helvetica Neue";
+		}
+		.footer .footer_add p{
+			color: grey;
+			font-size: 1em;
+		}
+		.footer .footer_social{
+			width: 50%;
+			display: inline-block;
+			float: right;
+			text-align: right;
+		}
+		.footer .footer_social .fa {
+      padding: 0.3em;
+      font-size: 1.5em;
+      width: 5%%;
+			margin-right: 1%;
+			margin-top: 1%;
+      text-align: center;
+      text-decoration: none;
+    }
+		.footer .footer_social .fa:hover {
+        opacity: 0.8;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+	}
+	@media screen and (max-width: 1360px) and (min-width: 961px) {
+		.container {
+			margin: 0%;
+			padding: 0%;
+			width: auto;
+		}
+		.logo{
+			margin: 0%;
+			padding: 0% 0.5%;
+			width: 100%;
+			height: 12.5%;
+			background-color: #FFFFFF;
+			border-top: 0.3em solid #9E2510;
+			border-bottom: 0.075em solid grey;
+			position: fixed;
+			overflow: hidden;
+		}
+		.logo img{
+			width: 15em;
+			height: auto;
+		}
+		.search{
+			display: inline-block;
+		}
+		.logo #search_form {
+			border-radius: 0.25em;
+			padding-left: 0.5em;
+			margin-left: 2.5em;
+			background-color: #F4F4F4;
+			width: 25em;
+			height: 2.5em;
+		}
+		.logo #search {
+			border-radius: 0.25em;
+			height: 2.5em;
+			width: 4em;
+		}
+		.logo #login {
+			display: inline-block;
+			margin-left: 6.5em;
+			width: 6em;
+			height: 2.5em;
+		}
+		.logo #signup {
+			display: inline-block;
+			margin-left: 1em;
+			width: 6em;
+			height: 2.5em;
+		}
+		.content {
+			position: inherit;
+			margin-top: 10%;
+		}
+		.content .question_content{
+			display: inline-block;
+			float: left;
+			width: 55%;
+			margin-left: 5%;
+			border-right: 0.25em solid #9E2510;
+		}
+		.content .question_content .sub_head{
+			width: 100%;
+			display: block;
+			margin-bottom: 10%;
+		}
+		.content .question_content .sub_head h3{
+			display: inline-block;
+			float: left;
+		}
+		.content .question_content button{
+			width: 20%;
+			display: inline-block;
+			float: right;
+			margin-top: 2.5%;
+			margin-right: 2%;
+		}
+		.content .question_content .questions	{
+			display: block;
+			width: 90%;
+			padding: 2% 0%;
+			margin-top: 1%;
+			border-top: 0.01em solid grey;
+		}
+		.content .courses{
+			text-align: center;
+			display: inline-block;
+			float: right;
+			width: 35%;
+			position: fixed;
+		}
+		.footer{
+			display: block;
+			width: 100%;
+			margin-top: 5%;
+			border-top: 0.1em solid #9E2510;
+		}
+		.footer .footer_add{
+			width: 50%;
+			display: inline-block;
+			float: left;
+			padding-left: 1%;
+		}
+		.footer .footer_add h5{
+			color: #9E2510;
+			font-size: 1.5em;
+			font-family: "Helvetica Neue";
+		}
+		.footer .footer_add p{
+			color: grey;
+			font-size: 1em;
+		}
+		.footer .footer_social{
+			width: 50%;
+			display: inline-block;
+			float: right;
+			text-align: right;
+		}
+		.footer .footer_social .fa {
+      padding: 0.3em;
+      font-size: 1.5em;
+      width: 5%;
+			margin-right: 1%;
+			margin-top: 1%;
+      text-align: center;
+      text-decoration: none;
+    }
+		.footer .footer_social .fa:hover {
+        opacity: 0.8;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+	}
+	@media screen and (min-width: 1361px) {
+		.container {
+			margin: 0%;
+			padding: 0%;
+			width: auto;
+		}
+		.logo{
+			margin: 0%;
+			padding: 0% 0.5%;
+			width: 100%;
+			height: 17%;
+			background-color: #FFFFFF;
+			border-top: 0.3em solid #9E2510;
+			border-bottom: 0.075em solid grey;
+			position: fixed;
+			overflow: hidden;
+		}
+		.log_img h4{
+			float: left;
+			color: red;
+			text-align: center;
+			font-size: 2em;
+			margin-top: 1.25em;
+		}
+		.search{
+			display: inline-block;
+		}
+		.logo #search_form {
+			border-radius: 0.25em;
+			padding-left: 0.5em;
+			margin-left: 20em;
+			margin-top: 2.5em;
+			background-color: #F4F4F4;
+			width: 35em;
+			height: 2.5em;
+		}
+		.logo #search {
+			border-radius: 0.25em;
+			height: 2.5em;
+			width: 4em;
+		}
+		.logo #login {
+			display: inline-block;
+			margin-left: 7.5em;
+			width: 6em;
+			height: 2.5em;
+		}
+		.logo #signup {
+			display: inline-block;
+			margin-left: 1em;
+			width: 6em;
+			height: 2.5em;
+		}
+		.content {
+			position: inherit;
+			margin-top: 10%;
+		}
+		.content .question_content{
+			display: inline-block;
+			float: left;
+			width: 65%;
+			margin-left: 5%;
+			border-right: 0.25em solid #9E2510;
+		}
+		.content .question_content .sub_head{
+			width: 100%;
+			display: block;
+			margin-bottom: 8.5%;
+		}
+		.content .question_content .sub_head h3{
+			display: inline-block;
+			float: left;
+		}
+		.content .question_content button{
+			width: 20%;
+			display: inline-block;
+			float: right;
+			margin-top: 2.5%;
+			margin-right: 2%;
+		}
+		.content .question_content .questions	{
+			display: block;
+			width: 90%;
+			padding: 2% 0%;
+			margin-top: 1%;
+			border-top: 0.01em solid grey;
+		}
+		.content .courses{
+			text-align: center;
+			display:	 inline-block;
+			float: right;
+			width: 25%;
+			position: fixed;
+		}
+		.footer{
+			display: block;
+			width: 100%;
+			margin-top: 5%;
+			border-top: 0.1em solid #9E2510;
+		}
+		.footer .footer_add{
+			width: 50%;
+			display: inline-block;
+			float: left;
+			padding-left: 1%;
+		}
+		.footer .footer_add h5{
+			color: #9E2510;
+			font-size: 1.5em;
+			font-family: "Helvetica Neue";
+		}
+		.footer .footer_add p{
+			color: grey;
+			font-size: 1em;
+		}
+		.footer .footer_social{
+			width: 50%;
+			display: inline-block;
+			float: right;
+			text-align: right;
+		}
+		.footer .footer_social .fa {
+      padding: 0.3em;
+      font-size: 2em;
+      width: 6.5%;
+			margin-right: 1%;
+			margin-top: 1%;
+      text-align: center;
+      text-decoration: none;
+    }
+		.footer .footer_social .fa:hover {
+        opacity: 0.8;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+	}
+
+	</style>
